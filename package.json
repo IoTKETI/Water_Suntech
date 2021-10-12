@@ -1,0 +1,22 @@
+{
+  "name": "Water_Suntech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "events": "^3.3.0",
+    "http": "0.0.1-security",
+    "ieee-float": "^0.6.0",
+    "modbus-serial": "^8.0.4",
+    "mqtt": "^4.2.8",
+    "serialport": "^9.2.1",
+    "sync-request": "^6.1.0",
+    "util": "^0.12.4",
+    "uuid": "^3.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
