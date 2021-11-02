@@ -58,7 +58,7 @@ conf.noti = noti;
 module.exports = conf;
  
 ```
-- app.js에서 MODBUS Serial의 Port와 Baudrate, setid, data address를 설정한다.
+- app.js에서 MODBUS Serial의 Port와 Baudrate, Setid, Data Address를 설정한다.
 
 ```
 
