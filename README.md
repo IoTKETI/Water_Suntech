@@ -68,7 +68,7 @@ client.setID(1);                 // MODBUS SETID
 client.readHoldingRegisters(0, 2,....{... // MODBUS DATA ADDRESS
 ...
 }
-var delay = 5000;                // Request time to oneM2M platform 
+var delay = 5000;                // Default request time to oneM2M platform 
 
 ```
 
