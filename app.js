@@ -10,22 +10,22 @@ var wdc_base = new wdc();
 var event = new events.EventEmitter();
 wdc_base.set_wdc_info(conf.cse.host,conf.cse.port,conf.ae.id);
 
-var delay = 5000;
+var delay = 5000; //Request time to oneM2M paltform
 var reprtActvty=true;
 var start_flag = true
 
 var ModbusRTU = require("modbus-serial");
 var client = new ModbusRTU();
 
-var waterPortNum = '/dev/ttyUSB0';
+var waterPortNum = '/dev/ttyUSB0'; //Modbus serial port
 
-client.connectRTUBuffered(waterPortNum, { baudRate: 9600 });
-client.setID(1);
+client.connectRTUBuffered(waterPortNum, { baudRate: 9600 }); // Modbus serial connect(port, baudrate)
+client.setID(1); //Modbus serial setid 
 
 gethering_value();
 
 var value_data ='';
-function gethering_value(){
+function gethering_value(){ // Modbus serial  data read 
 	if(client.isOpen && start_flag){
         interval_upload(delay);
 		start_flag=false
@@ -51,7 +51,7 @@ function gethering_value(){
 
 
 var timerId = '';
-function interval_upload(delay){
+function interval_upload(delay){ // send update request to oneM2M platform
     var cnt_path = conf.ae.parent + '/' + conf.ae.name + '/' + conf.cnt.name+ '/' +conf.cnt.flexcnt; //flex_cnt_path
     timerId = setInterval(function(){
       if(value_data !=''){ 
