@@ -10,7 +10,7 @@ var wdc_base = new wdc();
 var event = new events.EventEmitter();
 wdc_base.set_wdc_info(conf.cse.host,conf.cse.port,conf.ae.id);
 
-var delay = 5000; //Request time to oneM2M paltform
+var delay = 5000; //Default request time to oneM2M paltform
 var reprtActvty=true;
 var start_flag = true
 
